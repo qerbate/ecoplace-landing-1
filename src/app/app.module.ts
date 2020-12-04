@@ -38,8 +38,8 @@ import {MatStepperModule} from '@angular/material/stepper';
 import { ChartsModule } from 'ng2-charts';
 import {ModalModule} from 'ngx-bootstrap/modal';
 
-import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
-import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService} from '@syncfusion/ej2-angular-schedule';
+
+
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -100,7 +100,7 @@ import { AuthGuard } from './auth/auth.guard';
     MatStepperModule,
     ChartsModule,
     ModalModule.forRoot(),
-    ScheduleModule,
+   
     MatToolbarModule,
     MatTabsModule,
     MatCheckboxModule,
