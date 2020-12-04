@@ -17,10 +17,7 @@ import { FeaturePageComponent } from './feature-page/feature-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
-import { ContactScheduleComponent } from './contact-schedule/contact-schedule.component';
 
-import { RegisterUserComponent } from './register-user/register-user.component';
-import { LoginUserComponent } from './login-user/login-user.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
@@ -38,19 +35,13 @@ const routes: Routes = [
   {path:  'contact', component: ContactComponent,canActivate:[AuthGuard],
    data: {title: `Lista de Contato`}
   },
-  { path: 'login-user', component: LoginUserComponent,
-  },
-  { path: 'register-user', component: RegisterUserComponent,
-  },
+  
   {path: 'contact-details/:id',
   component: ContactDetailsComponent,
   data: {title: `Contato Detalhes`}
   },
 
-  {path: 'contact-schedule',
-  component: ContactScheduleComponent,
-  data: {title: `Contato Agenda`}
-  },
+ 
   {path: 'contact-stat',
   component: ContactStatComponent,
   data: {title: `Contato Estatística`}

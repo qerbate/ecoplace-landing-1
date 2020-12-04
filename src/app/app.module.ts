@@ -37,14 +37,13 @@ import { MatSelectModule } from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import { ChartsModule } from 'ng2-charts';
 import {ModalModule} from 'ngx-bootstrap/modal';
-import { ContactScheduleComponent } from './contact-schedule/contact-schedule.component';
+
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService} from '@syncfusion/ej2-angular-schedule';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-import { RegisterUserComponent } from './register-user/register-user.component';
-import { LoginUserComponent } from './login-user/login-user.component';
+
 import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 import { UserService } from './shared/user.service';
@@ -71,9 +70,7 @@ import { AuthGuard } from './auth/auth.guard';
     FeaturePageComponent,
     ContactPageComponent,
     PaginaNaoEncontradaComponent,
-    ContactScheduleComponent,
-    RegisterUserComponent,
-    LoginUserComponent,
+    
    
   
    
@@ -112,12 +109,7 @@ import { AuthGuard } from './auth/auth.guard';
    
     
   ],
-  providers: [DayService, 
-    WeekService, 
-    WorkWeekService, 
-    MonthService,
-    AgendaService,
-    MonthAgendaService,AuthGuard, UserService],
+  providers: [AuthGuard, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

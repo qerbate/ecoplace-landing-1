@@ -51,7 +51,7 @@
     <div class="container d-flex justify-content-center">
 
       <h2 class="text-uppercase">
-        Contate-Nos
+        Nossa Localização
       </h2>
     </div>
     <div class="container-fluid layout_padding-top">
@@ -67,65 +67,32 @@
           <div class="col-md-10 px-0">
             <div class="contact-page">
               <mat-card class="mat-elevation-z8">
-                <mat-card-title style="text-align:center;">Formulário de Contato</mat-card-title>
+                <mat-card-title style="text-align:center;"><img src="assets/images/word4.png" class="word4" /></mat-card-title>
 
                 <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
 
 
                   <mat-tab label="">
                     <mat-card-content>
-                      <form #messageForm="ngForm" (ngSubmit)="messageForm.valid && onSubmit(messageForm)">
-                        <mat-form-field>
-                          <input matInput
-                                 placeholder="Nome"
-                                 required
-                                 name="name"
-                                 ngModel
-                                 #name="ngModel">
-                          <mat-icon matSuffix>perm_identity</mat-icon>
-                          <mat-error *ngIf="name.invalid">
-                            nome é requerido
-                          </mat-error>
+                      
 
-                        </mat-form-field>
-                        <mat-form-field>
-                          <input matInput
-                                 placeholder="Email"
-                                 required
-                                 name="email"
-                                 ngModel
-                                 #email="ngModel">
-                          <mat-error *ngIf="email.invalid">Email é requerido!</mat-error>
-                          <mat-icon matSuffix>email</mat-icon>
-                        </mat-form-field>
-                        <mat-form-field>
-                          <input matInput
-                                 placeholder="Mensagem"
-                                 type="message"
-                                 required
-                                 minlength="15"
-                                 name="message"
-                                 ngModel
-                                 #message="ngModel">
-                          <mat-error *ngIf="message.errors && message.errors.required">
-                            Mensagem é requerida!
-                          </mat-error>
-                          <mat-error *ngIf="message.errors && message.errors.minlength">
-                            A mensagem deve ter 15 digitos ou mais!
-                          </mat-error>
-                          <mat-icon matSuffix>message</mat-icon>
-                        </mat-form-field>
-
-                        <button type="submit"
-                                value="Message"
-                                mat-raised-button
-                                color="primary"
-                                class="message-button">
-
-                          Enviar
-                        </button>
-
-                      </form>
+                       
+                            <mat-card-content>
+                            Endereço Praça Roosevelt,
+                            <br>
+                            Bairro: Centro
+                            <br>
+                            São Paulo-Capital 
+                            <br>
+                            email:eco@ecoplace.landing.com
+                           </mat-card-content>
+                            
+                           
+                            
+                            
+                       
+                        
+                       
                     </mat-card-content>
                   </mat-tab>
                 </mat-tab-group>
@@ -183,7 +150,7 @@
           <div class="col-md-4">
             <div class="d-flex">
               <a>
-                <img src="assets/images/word4.png" class="word4" />
+                
               </a>
             </div>
 
