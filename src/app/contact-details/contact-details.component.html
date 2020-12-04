@@ -1,0 +1,36 @@
+<div class="example-container mat-elevation-z8">
+  <h2>Ecoplace Contato Detalhes</h2>
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/Header']"><mat-icon>home</mat-icon></a>
+    <a mat-flat-button color="accent" [routerLink]="['/contact-schedule']"><mat-icon>view_agenda</mat-icon></a>
+  </div>
+  
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><h2>{{contact.name}}</h2></mat-card-title>
+      <mat-card-subtitle>{{contact.age}} year old</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <dl>
+        <dt>Gender:</dt>
+        <dd>{{contact.gender}}</dd>
+        <dt>Address:</dt>
+        <dd>{{contact.address}}</dd>
+        <dt>City:</dt>
+        <dd>{{contact.city}}</dd>
+        <dt>Country:</dt>
+        <dd>{{contact.country}}</dd>
+        <dt>Status:</dt>
+        <dd><h2>{{contact.status}}</h2></dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-flat-button color="primary" [routerLink]="['/edit-contact', contact._id]"><mat-icon>edit</mat-icon> Contatos</a>
+      <a mat-flat-button color="warn" (click)="deleteContact(contact._id)"><mat-icon>delete</mat-icon> Contatos</a>
+    </mat-card-actions>
+  </mat-card>
+</div>

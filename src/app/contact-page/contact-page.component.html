@@ -1,0 +1,257 @@
+<div class="hero_area">
+  <!-- header section strats -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" routerLink="/" routerLinkActived="Actived">
+          <span>
+            ECOPLACE
+          </span>
+        </a>
+
+        <div class="navbar-collapse" id="">
+          <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+            <form class="form-inline mb-3 mb-lg-0 ">
+              <button class="btn  my-sm-0 nav_search-btn"
+                      type="submit"></button>
+            </form>
+            <ul class="navbar-nav  mr-5">
+              <li class="nav-item mr-5">
+                <a>
+
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="custom_menu-btn">
+            <button onclick="openNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div id="myNav" class="overlay">
+            <div class="overlay-content">
+              <a routerLink="/Header" routerLinkActive="active">Início</a>
+              <a routerLink="/WhoPage" routerLinkActive="active">Sobre Nós</a>
+              <a routerLink="/FeaturePage" routerLinkActive="active">Recursos</a>
+              <a routerLink="/ContactPage" routerLinkActive="active">Contate Nos</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+</div>
+<div>
+  <br>
+  <!-- contact section -->
+  <section class="contact_section ">
+    <div class="container d-flex justify-content-center">
+
+      <h2 class="text-uppercase">
+        Contate-Nos
+      </h2>
+    </div>
+    <div class="container-fluid layout_padding-top">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-10 offset-md-2">
+            <div class="contact_img-box">
+              <img src="assets/images/form-img.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 form_bg px-0">
+          <div class="col-md-10 px-0">
+            <div class="contact-page">
+              <mat-card class="mat-elevation-z8">
+                <mat-card-title style="text-align:center;">Formulário de Contato</mat-card-title>
+
+                <mat-tab-group mat-stretch-tabs class="example-stretched-tabs">
+
+
+                  <mat-tab label="">
+                    <mat-card-content>
+                      <form #messageForm="ngForm" (ngSubmit)="messageForm.valid && onSubmit(messageForm)">
+                        <mat-form-field>
+                          <input matInput
+                                 placeholder="Nome"
+                                 required
+                                 name="name"
+                                 ngModel
+                                 #name="ngModel">
+                          <mat-icon matSuffix>perm_identity</mat-icon>
+                          <mat-error *ngIf="name.invalid">
+                            nome é requerido
+                          </mat-error>
+
+                        </mat-form-field>
+                        <mat-form-field>
+                          <input matInput
+                                 placeholder="Email"
+                                 required
+                                 name="email"
+                                 ngModel
+                                 #email="ngModel">
+                          <mat-error *ngIf="email.invalid">Email é requerido!</mat-error>
+                          <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+                        <mat-form-field>
+                          <input matInput
+                                 placeholder="Mensagem"
+                                 type="message"
+                                 required
+                                 minlength="15"
+                                 name="message"
+                                 ngModel
+                                 #message="ngModel">
+                          <mat-error *ngIf="message.errors && message.errors.required">
+                            Mensagem é requerida!
+                          </mat-error>
+                          <mat-error *ngIf="message.errors && message.errors.minlength">
+                            A mensagem deve ter 15 digitos ou mais!
+                          </mat-error>
+                          <mat-icon matSuffix>message</mat-icon>
+                        </mat-form-field>
+
+                        <button type="submit"
+                                value="Message"
+                                mat-raised-button
+                                color="primary"
+                                class="message-button">
+
+                          Enviar
+                        </button>
+
+                      </form>
+                    </mat-card-content>
+                  </mat-tab>
+                </mat-tab-group>
+              </mat-card>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+</div>
+<div>
+
+  <!-- info section -->
+  <section class="info_section layout_padding">
+    <div class="container info_content">
+      <div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="d-flex">
+              <h5>
+                Nossos Serviços
+              </h5>
+            </div>
+            <div class="d-flex ">
+              <ul>
+                <li>
+                  <a>
+                    A Ecoplace desenvolveu um aplicativo
+                    que auxilia o consumidor a realizar o
+                    descarte correto do óleo, fazendo a
+                    mediação entre as pessoas e usinas
+                    de reciclagem.
+                    Nestas circunstâncias, o aplicativo
+                    disponibiliza cupons de desconto a cada
+                    reciclagem, sendo possível o recebimento
+                    de um cupom bônus mensal.
+                  </a>
+                </li>
+                <br>
+
+
+
+
+
+
+
+
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <a>
+                <img src="assets/images/word4.png" class="word4" />
+              </a>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <div class="d-flex">
+              <h5>
+                Contate Nos
+              </h5>
+            </div>
+            <div class="d-flex ">
+              <ul>
+                <li>
+                  <a>
+                    tel:(11)37748651
+                  </a>
+                </li>
+                <br>
+                <li>
+                  <a>
+                    fax:(11)37748651
+                  </a>
+                </li>
+                <br>
+                <li>
+                  <a>
+                    eco@ecoplace.landing.com
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center align-items-lg-baseline">
+        <div class="social-box">
+          <a href="">
+            <img src="images/fb.png" alt="" />
+          </a>
+
+          <a href="">
+            <img src="images/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/linkedin1.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/instagram1.png" alt="" />
+          </a>
+        </div>
+        <a>
+
+
+        </a>
+      </div>
+    </div>
+  </section>
+
+</div>
+<div>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      &copy; Todos os direitos reservados. 2020
+      <a routerLink="/End" routerLinkActive="active">Ecoplace Soluções Em Ti Ltda</a>
+    </p>
+  </section>
+</div>

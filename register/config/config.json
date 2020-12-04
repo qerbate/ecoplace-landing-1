@@ -1,0 +1,16 @@
+{
+  "development": {
+    "port": 4000,
+    "MONGODB_URI": "mongodb+srv://qerbate:6r6Wq2aMqssXVQJF@cluster0.yvhro.mongodb.net/ecoplacedb?retryWrites=true&w=majority",
+    "JWT_SECRET": "SECRET#123",
+        "JWT_EXP": "2m"
+    },
+  
+  "production": {
+   "PORT": 80,
+   "MONGODB_URI": "mongodb+srv://qerbate:6r6Wq2aMqssXVQJF@cluster0.yvhro.mongodb.net/ecoplacedb?retryWrites=true&w=majority",
+   "JWT_SECRET": "SECRET#123",
+   "JWT_EXP": "2m"
+}
+
+}

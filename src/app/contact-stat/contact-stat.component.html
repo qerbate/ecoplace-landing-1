@@ -1,0 +1,28 @@
+<div class="example-container mat-elevation-z8">
+  <h2>Contatos Estatística</h2>
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <a mat-flat-button color="primary" [routerLink]="['/Header']"><mat-icon>home</mat-icon></a>
+    <a mat-flat-button color="accent" [routerLink]="['/contact-schedule']"><mat-icon>view_agenda</mat-icon></a>
+  </div>
+  <div class="button-row">
+    <mat-button-toggle-group name="status" aria-label="Status" [(ngModel)]="label" (ngModelChange)="changeStatus()">
+      <mat-button-toggle value="18-35">18-35</mat-button-toggle>
+      <mat-button-toggle value="35-50">35-50</mat-button-toggle>
+      <mat-button-toggle value="50-100">50-100</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+  <div style="display: block;">
+    <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [plugins]="barChartPlugins"
+      [legend]="barChartLegend"
+      [chartType]="barChartType">
+    </canvas>
+  </div>
+</div>

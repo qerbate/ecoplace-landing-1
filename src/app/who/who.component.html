@@ -1,0 +1,83 @@
+
+<div>
+  <!-- who section -->
+
+  <section class="who_section">
+
+    <div class="container who_container">
+      <div class="who_img-box">
+        <img src="assets/images/pc.png" alt="" />
+      </div>
+      <div class="who_deail-box">
+        <h2>
+
+
+          Sobre a Ecoplace
+
+        </h2>
+        <p>
+          Pensando na dificuldade em reciclar o óleo de cozinha, seja por falta de informação, ou por alternativas para o descarte correto, como é o caso de muitas cidades, a Ecoplace criou um aplicativo
+          para auxiliar incentivando as pessoas. Ao utilizar a tecnologia como ponte para estabelecer uma conexão mútua entre o exercício da cidadania e a conservação
+          ambiental.
+          O aplicativo Ecoplace facilita o descarte correto do óleo reutilizável, além de disponibilizar muitos benefícios e vantagens atraentes, entre outras coisas!
+        </p>
+        <div>
+          <button type="button" class="btn btn-success" (click)="openModalWithClass(template)">Leia Mais!</button>
+        </div>
+        <br>
+
+
+
+        <ng-template #template>
+
+          <div class="modal-header">
+
+            <h5 class="modal-title pull-left">Ecoplace Tutorial | Baixe o Aplicativo Ecoplace Diretamente no Celular</h5>
+
+            <button type="button" class="close pull-right" aria-label="Fechar" (click)="modalRef.hide()">
+
+              <span aria-hidden="true">×</span>
+
+            </button>
+
+          </div>
+
+          <div class="modal-body">
+
+
+            <iframe src="assets/images/word5.png" class="word5" width="770" height="470" margin-top="5%" left="10%" margin-right="0%" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+            <h5>
+              Baixe nosso aplicativo<a href="https://drive.google.com/u/0/uc?export=download&confirm=FB8m&id=1tluH96GprLGIA_pIS2MM2i0bAJrpIRAa">  aqui.</a>
+            </h5>
+
+
+
+
+
+
+
+
+
+
+          </div>
+
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" (click)="modalRef.hide()">Fechar</button>
+
+          </div>
+
+        </ng-template>
+      </div>
+    </div>
+  </section>
+
+  <!-- end who section -->
+
+
+
+
+
+</div>

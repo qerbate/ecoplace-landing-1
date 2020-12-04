@@ -1,0 +1,11 @@
+@media (max-width: 150%) {
+  .feature_page {
+      height: 200px;
+  }
+}
+.feature_page{
+transform:  translatey(85%);
+  -ms-transform: scaleY(1.7); /* IE 9 */
+  transform: scaleY(1.7);
+
+}

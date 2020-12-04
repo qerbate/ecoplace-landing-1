@@ -1,0 +1,100 @@
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand"  routerLink="/" routerLinkActived="Actived">
+            <span>
+              ECOPLACE
+            </span>
+          </a>
+
+          <div class="navbar-collapse" id="">
+            <div class="d-none d-lg-flex ml-auto flex-column flex-lg-row align-items-center mt-3">
+              <form class="form-inline mb-3 mb-lg-0 ">
+                <button class="btn  my-sm-0 nav_search-btn"
+                        type="submit"></button>
+              </form>
+              <ul class="navbar-nav  mr-5">
+                <li class="nav-item mr-5">
+                  <a  >
+                    <a mat-button color="warm" [routerLink]="['/register-user']"><mat-icon>person_add</mat-icon> Login</a> |   <a mat-button color="warm" (click)="onLogout()"[routerLink]="['/Header']"><mat-icon>exit_to_app</mat-icon> Logout</a>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a  routerLink="/Header" routerLinkActive="active" >Início</a>
+                <a  routerLink="/WhoPage" routerLinkActive="active">Sobre Nós</a>
+                <a  routerLink="/FeaturePage" routerLinkActive="active">Recursos</a>
+                <a  routerLink="/ContactPage" routerLinkActive="active">Contate Nos</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <div [ngSwitch]>
+      <app-slider></app-slider>
+      </div>
+    
+    
+   
+  </div>
+    <div [ngSwitch]>
+    <app-about></app-about>
+    <app-who></app-who>
+    </div>
+    <div [ngSwitch]>
+      <app-feature></app-feature>
+      <app-contact></app-contact>
+    </div>
+    <div [ngSwitch]>
+      <app-info></app-info>
+      <app-footer></app-footer>
+    </div>
+  
+    <button
+  ngxScrollTop
+  [ngxScrollTopMode]="'smart'"
+  class="my-custom-style"
+  color="primary"
+  mat-mini-fab
+>
+  top
+</button>
+  
+
+
+  <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document
+        .querySelector(".custom_menu-btn")
+        .classList.toggle("menu_btn-style");
+    }
+  </script>
+  <script>
+    if('geolocation' in navigator){
+      const watcher = navigator.geolocation.watchPosition(function(position){
+       console.log(position)
+      },function(error){
+      console.log(error)
+    }, { enableHighAccuracy:true, maximumAge:30000, timeout: 30000 })
+    navigator.geolocation.clearWatch(watcher)
+    }else{
+      alert('ops, não foi possível pegar localização')
+    }
+    
+  </script>
